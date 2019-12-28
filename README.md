@@ -19,3 +19,4 @@ Many thanks to my friend Omar and the internet!
 
 ### Updates
 An update was made for typo mistakes in this document. 28/12/2019
+An update was made to welcoming string in python code. 28/12/2019
