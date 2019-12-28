@@ -18,5 +18,5 @@ washington.csv
 Many thanks to my friend Omar and the internet!
 
 ### Updates
-An update was made for typo mistakes in this document. 28/12/2019
-An update was made to welcoming string in python code. 28/12/2019
+create refactoring branch. 28/12/2019.
+change raw_input to input. 28/12/2019

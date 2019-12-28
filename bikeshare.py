@@ -21,24 +21,24 @@ def get_filters():
     print('Hello my friend! Let\'s explore some US bikeshare data!')
     # TO DO: get user raw_input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     while 1 == 1 :
-        city = raw_input("\nenter the name of the city to analyze city names are as follows\nchicago,\nnew york,\nwashington. \n").lower()
+        city = input("\nenter the name of the city to analyze city names are as follows\nchicago,\nnew york,\nwashington. \n").lower()
         if city in ['chicago', 'new york', 'washington']:
             break
         else:
             print(invalid_inputs)
 
-    # TO DO: get user raw_input for month (all, january, february, ... , june)
+    # TO DO: get user input for month (all, january, february, ... , june)
     while 1 == 1 :
-        month = raw_input("\nenter the name of the month\njanuary,\nfebruary,\nmarch,"
+        month = input("\nenter the name of the month\njanuary,\nfebruary,\nmarch,"
             "\napril,\nmay,\njune\nto filter by, or \"all\" to apply no month filter\n").lower()
         if month in ["january", "february", "march", "april", "may", "june", "all"]:
             break
         else:
             print(invalid_inputs)
 
-    # TO DO: get user raw_input for day of week (all, monday, tuesday, ... sunday)
+    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while 1 == 1 :
-        day = raw_input("\nenter the name of the day\nmonday,\ntuesday,\nwednesday,\nthursday,"
+        day = input("\nenter the name of the day\nmonday,\ntuesday,\nwednesday,\nthursday,"
             "\nfriday,\nsaturday,\nsunday\nof week to filter by, or \"all\" to apply no day filter\n").lower()
         if day in ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "all"]:
             break
@@ -60,7 +60,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     file_name = CITY_DATA[city]
-    print ("Accessing data from: " + file_name)
+    print ("Accessing data from: {}.".format(file_name))
     df = pd.read_csv(file_name)
 
     # convert the Start Time column to datetime
@@ -191,19 +191,19 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
-    user_input = raw_input('Do you want to see raw data? Enter yes or no.\n')
+    user_input = input('Do you want to see raw data? Enter yes or no.\n')
     line_number = 0
 
     while 1 == 1 :
         if user_input.lower() != 'no':
             print(df.iloc[line_number : line_number + 5])
             line_number += 5
-            user_input = raw_input('\nDo you want to see more raw data? Enter yes or no.\n')
+            user_input = input('\nDo you want to see more raw data? Enter yes or no.\n')
         else:
             break
 
 def main():
-    while 1 == 1 :
+    while True :
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -212,7 +212,7 @@ def main():
         trip_duration_stats(df)
         user_stats(df)
         raw_data(df)
-        restart = raw_input('\nWould you like to restart? Enter yes or no.\n')
+        restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
 
