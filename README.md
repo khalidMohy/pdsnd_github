@@ -5,7 +5,7 @@
 Udacity Bikeshare
 
 ### Description
-This is the second project in udacity nanaodegree program for "Programming for data science"
+This is the second project in Udacity nanodegree program for "Programming for data science"
 The project is to use data provided by Motivate, a bike share system provider for many major cities in the United States, to uncover bike share usage patterns. You will compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
 
 ### Files used
@@ -15,4 +15,7 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-Many thanks to my freind Omar and the internet!
+Many thanks to my friend Omar and the internet!
+
+### Updates
+An update was made for typo mistakes in this document. 28/12/2019
